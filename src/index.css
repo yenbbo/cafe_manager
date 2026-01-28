@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "pretendard";
+  src: url("/pretendard-Regular.otf");
+}
+
+body * {
+  font-family: "pretendard";
+}
+
+html,
+body {
+  margin: 0px;
+  width: 100%;
+
+  display: flex;
+}
+
+#root {
+  background-color: white;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  height: 100%;
+  padding: 20px;
+}
