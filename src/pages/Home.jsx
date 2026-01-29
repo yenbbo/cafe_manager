@@ -1,4 +1,3 @@
-import Button from "../components/Button";
 import FilterBar from "../components/FilterBar";
 import SearchBar from "../components/SearchBar";
 import InventoryList from "../components/InventoryList";
@@ -22,7 +21,8 @@ const Home = () => {
         .toLowerCase()
         .replace(/\s+/g, "") // 문자열 모든 공백 제거하기
         .includes(searchText.toLowerCase().replace(/\s+/g, "")),
-    );
+    )
+    .filter((item) => !needOrder || item.quantity <= item.threshold);
 
   return (
     <div>
@@ -36,7 +36,11 @@ const Home = () => {
         />
       </div>
 
-      <InventoryList data={filteredData} />
+      <InventoryList
+        data={filteredData}
+        needOrder={needOrder}
+        onClickNeedOrder={() => setNeedOrder(!needOrder)}
+      />
     </div>
   );
 };

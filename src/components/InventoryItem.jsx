@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import { useContext } from "react";
-import { InventoryDispatchContext, InventoryStateContext } from "../App";
+import { InventoryDispatchContext } from "../App";
 
 const InventoryItem = ({ id, name, quantity, threshold }) => {
   const nav = useNavigate();

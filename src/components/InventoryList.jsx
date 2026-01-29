@@ -1,15 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import InventoryItem from "./InventoryItem";
 
-const InventoryList = ({ data }) => {
+const InventoryList = ({ data, needOrder, onClickNeedOrder }) => {
   const nav = useNavigate();
 
   return (
     <div>
       <div className="flex justify-between mb-3">
         <button
-          className="justify-start px-2 py-1 rounded-xl text-blue-800 border border-blue-800 cursor-pointer"
-          onClick={() => {}}
+          className={`px-2 py-1 rounded-xl border cursor-pointer ${needOrder ? "bg-red-400 text-white border-red-500" : "text-blue-800 border-blue-800"}`}
+          onClick={onClickNeedOrder}
         >
           🚨 발주 필요만 보기
         </button>

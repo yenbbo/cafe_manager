@@ -6,7 +6,7 @@ const FilterBar = ({
   showAll = true,
 }) => {
   return (
-    <div className="flex gap-5 felx-wrap">
+    <div className="flex gap-5 flex-wrap">
       {showAll && (
         <button
           onClick={() => onSelectedCategory("전체")}
