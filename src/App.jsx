@@ -50,8 +50,8 @@ function reducer(state, action) {
   }
 }
 
-const InventoryStateContext = createContext();
-const InventoryDispatchContext = createContext();
+export const InventoryStateContext = createContext();
+export const InventoryDispatchContext = createContext();
 
 function App() {
   const [data, dispatch] = useReducer(reducer, mockData);
@@ -93,6 +93,20 @@ function App() {
     });
   };
 
+  // 수량 업데이트
+  const onUpdateQuantity = (id, newQuantity) => {
+    const item = data.find((item) => item.id === id);
+    if (item) {
+      dispatch({
+        type: "UPDATE",
+        data: {
+          ...item,
+          quantity: newQuantity,
+        },
+      });
+    }
+  };
+
   return (
     <>
       <InventoryStateContext.Provider value={data}>
@@ -101,6 +115,7 @@ function App() {
             onCreate,
             onUpdate,
             onDelete,
+            onUpdateQuantity,
           }}
         >
           <Routes>

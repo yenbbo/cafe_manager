@@ -1,15 +1,15 @@
 const Button = ({ quantity, onIncrease, onDecrease }) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-4">
       <button
-        className="w-8 h-8 rounded-xl text-white bg-blue-500 hover:bg-blue-600"
+        className="w-8 h-8 rounded-xl text-white bg-blue-800 hover:bg-blue-600 cursor-pointer"
         onClick={onDecrease}
       >
         -
       </button>
-      <span w-6>{quantity}</span>
+      <span>{quantity}</span>
       <button
-        className="w-8 h-8 rounded-xl text-white bg-blue-500 hover:bg-blue-600"
+        className="w-8 h-8 rounded-xl text-white bg-blue-800 hover:bg-blue-600 cursor-pointer"
         onClick={onIncrease}
       >
         +
