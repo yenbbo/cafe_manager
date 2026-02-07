@@ -27,15 +27,15 @@ const ItemDetail = () => {
 
   const [newMenu, setNewMenu] = useState("");
 
-  if (!currentItem) {
-    return <div>존재하지 않는 재고입니다.</div>;
-  }
-
   useEffect(() => {
     if (currentItem) {
       setEditData(currentItem);
     }
   }, [currentItem]);
+
+  if (!currentItem) {
+    return <div>존재하지 않는 재고입니다.</div>;
+  }
 
   const onChangeInput = (e) => {
     setEditData({
