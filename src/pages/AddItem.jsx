@@ -49,7 +49,7 @@ const AddItem = () => {
 
   return (
     <div className="p-4">
-      <header className="flex justify-between mb-10 pb-8 border-b border-gray-400">
+      <header className="flex justify-between mb-10 pb-8 text-sm md:text-base border-b border-gray-400">
         <button
           className="justify-start px-2 py-1 rounded-xl text-blue-800 border border-blue-800 cursor-pointer"
           onClick={() => nav(-1)}

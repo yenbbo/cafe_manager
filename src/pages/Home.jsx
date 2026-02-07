@@ -26,9 +26,11 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-extrabold mb-2">재고 관리</h1>
-      <h4 className="text-gray-500 mb-6">오늘의 재고 현황을 기록해주세요</h4>
-      <div className="space-y-4 mb-10">
+      <h1 className="text-2xl md:text-3xl font-extrabold mb-2">재고 관리</h1>
+      <h4 className="text-sm md:text-base text-gray-500 mb-6">
+        오늘의 재고 현황을 기록해주세요
+      </h4>
+      <div className="space-y-4 mb-6 md:mb-10">
         <SearchBar searchText={searchText} onSearch={setSearchText} />
         <FilterBar
           selectedCategory={selectedCategory}

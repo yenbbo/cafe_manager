@@ -96,7 +96,7 @@ const ItemDetail = () => {
 
   return (
     <div className="p-4">
-      <header className="flex justify-between mb-10 pb-8 border-b border-gray-400">
+      <header className="flex justify-between mb-10 pb-8 text-sm md:text-base border-b border-gray-400">
         <button
           className="px-2 py-1 rounded-xl text-blue-800 border border-blue-800 cursor-pointer"
           onClick={() => nav(-1)}
@@ -131,7 +131,7 @@ const ItemDetail = () => {
         </label>
 
         {/* 메뉴 추가 입력 */}
-        <div className="flex gap-2 mb-4">
+        <div className="flex gap-2 mb-4 text-sm md:text-base">
           <input
             type="text"
             value={newMenu}
@@ -142,7 +142,7 @@ const ItemDetail = () => {
               }
             }}
             placeholder="메뉴명 입력 (예: 바닐라 라떼)"
-            className="flex-1 px-3 py-2 border rounded-lg"
+            className="flex-1 px-2 md:px-3 py-1 md:py-2 border rounded-lg"
           />
           <button
             onClick={addMenu}
@@ -153,7 +153,7 @@ const ItemDetail = () => {
         </div>
 
         {/* 메뉴 목록 */}
-        <div className="border border-gray-400 rounded-lg p-4">
+        <div className="border border-gray-400 rounded-lg text-sm md:text-base p-4">
           {!editData.menu || editData.menu.length === 0 ? (
             <p className="text-gray-500 text-center py-4">
               등록된 메뉴가 없습니다.

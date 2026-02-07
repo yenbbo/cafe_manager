@@ -3,7 +3,7 @@ import FilterBar from "./FilterBar";
 const ItemForm = ({ input, onChangeInput, onSelectedCategory }) => {
   return (
     <div>
-      <div className="space-y-6">
+      <div className="space-y-6 text-sm md:text-base">
         <div>
           <label className="block mb-2">물품명</label>
           <input

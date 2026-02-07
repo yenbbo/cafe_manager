@@ -6,7 +6,7 @@ const InventoryList = ({ data, needOrder, onClickNeedOrder }) => {
 
   return (
     <div>
-      <div className="flex justify-between mb-3">
+      <div className="flex justify-between mb-3 text-sm md:text-base">
         <button
           className={`px-2 py-1 rounded-xl border cursor-pointer ${needOrder ? "bg-red-400 text-white border-red-500" : "text-blue-800 border-blue-800"}`}
           onClick={onClickNeedOrder}

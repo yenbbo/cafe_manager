@@ -19,12 +19,12 @@ const InventoryItem = ({ id, name, quantity, threshold }) => {
 
   return (
     <div
-      className={`flex justify-between items-center gap-10 text-lg border-b border-b-gray-200 p-4 ${
+      className={`flex justify-between items-center gap-2 md:gap-10 whitespace-nowrap text-base md:text-lg border-b border-b-gray-200 p-2 md:p-4 ${
         quantity <= threshold ? "bg-red-100" : ""
       }`}
     >
       <div
-        className="w-40 cursor-pointer whitespace-nowrap overflow-x-auto"
+        className="w-24 md:w-40 overflow-auto cursor-pointer"
         onClick={() => nav(`/detail/${id}`)}
       >
         {name}
@@ -36,13 +36,14 @@ const InventoryItem = ({ id, name, quantity, threshold }) => {
         onDecrease={onDecrease}
       />
 
-      <div className="w-25">
+      <div className="w-12 md:w-24">
         {quantity <= threshold && (
           <div
-            className="text-sm px-2 py-1 text-center bg-red-300 text-red-600 rounded cursor-pointer"
+            className="text-sm px-1 md:px-2 py-1 whitespace-nowrap text-center bg-red-300 text-red-600 rounded cursor-pointer"
             onClick={() => nav(`/detail/${id}`)}
           >
-            🚨발주 필요
+            <span className="md:hidden">🚨</span>
+            <span className="hidden md:inline">🚨발주 필요</span>
           </div>
         )}
       </div>
